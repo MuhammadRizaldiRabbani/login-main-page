@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>main page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-app>
+    <ion-header class="header">
+      <ion-toolbar>
+        <ion-title>DEMO GPSKU</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <div class="greeting">
+        <h2>Hallo, Selamat Datang <b> {{ outputtext }} </b>! </h2>
+        <p>Tagihan Anda: <strong>Rp. 0</strong></p>
+        <ion-button color="primary" expand="block">Bayar</ion-button>
+      </div>
+
+      <div class="icon-grid">
+        <ion-card>
+          <ion-icon name="locate" size="large"></ion-icon>
+          <ion-label>Tracker</ion-label>
+        </ion-card>
+        <ion-card>
+          <ion-icon name="download" size="large"></ion-icon>
+          <ion-label>Report</ion-label>
+        </ion-card>
+        <ion-card>
+          <ion-icon name="play" size="large"></ion-icon>
+          <ion-label>Playback</ion-label>
+        </ion-card>
+        <ion-card>
+          <ion-icon name="card" size="large"></ion-icon>
+          <ion-label>Payment</ion-label>
+        </ion-card>
+        <ion-card>
+          <ion-icon name="alarm" size="large"></ion-icon>
+          <ion-label>Alarm</ion-label>
+        </ion-card>
+        <ion-card>
+          <ion-icon name="chatbubble" size="large"></ion-icon>
+          <ion-label>Chat</ion-label>
+        </ion-card>
+        <ion-card>
+          <ion-icon name="settings" size="large"></ion-icon>
+          <ion-label>Setup</ion-label>
+        </ion-card>
+      </div>
+
+      <div class="promo">
+        <h3>Konten Saat Ini</h3>
+        <p>Dapatkan konten dan promo menarik setiap saat dari kami</p>
+        <img src="assets/peta.jpg" alt="peta" />
+      </div>
+    </ion-content>
+  </ion-app>
+</ion-content>
