@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tracker"></ion-back-button>
+    </ion-buttons>
+    <ion-title>MOBIL A</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="details-section">
+    <ion-item>
+      <ion-label>Nomor Kendaraan: </ion-label>
+      <ion-input value="D 2345 PW" readonly></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tujuan: </ion-label>
+      <ion-input value="Purwakarta" readonly></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Estimasi Waktu Sampai: </ion-label>
+      <ion-input value="Rabu, 29-Juni-2030" readonly></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Jenis Barang: </ion-label>
+      <ion-input value="Sparepart Motor" readonly></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="action-section">
+    <ion-button expand="block" color="success" (click)="mulaiPengiriman()">Mulai Pengiriman</ion-button>
+  </div>
+</ion-content>

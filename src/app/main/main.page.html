@@ -1,0 +1,27 @@
+<ion-content class="ion-padding home-page">
+  <ion-card class="welcome-card" (click)="navigateToProfile()">
+    <ion-item lines="none">
+      <ion-label>
+        <h3>Hallo, Selamat Datang</h3>
+        <p><strong>{{ outputtext }}</strong>! </p>
+      </ion-label>
+      <ion-icon name="person-circle-outline" slot="end" size="large"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <div class="action-buttons">
+    <ion-button color="success" expand="block" shape="round" (click)="navigateToTracker()">
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      Tracker
+    </ion-button>
+    <ion-button color="success" expand="block" shape="round" (click)="navigateToReport()">
+      <ion-icon name="document-text-outline" slot="start"></ion-icon>
+      Report
+    </ion-button>
+  </div>
+
+  <div class="info-section">
+    <h4>Iklan informasi</h4>
+    <img src="assets/images/sample-image.jpg" alt="Iklan Informasi" />
+  </div>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tracking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Peta untuk menampilkan posisi saat ini dan rute -->
+  <div id="map" style="height: 400px;"></div>
+
+  <!-- Informasi Pengiriman -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Posisi Saat Ini</ion-label>
+      <ion-text>{{ currentLocation }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Estimasi Waktu Sampai</ion-label>
+      <ion-text>{{ estimatedTime }}</ion-text>
+    </ion-item>
+  </ion-list>
+
+  <!-- Tombol untuk menyelesaikan pengiriman -->
+  <ion-button expand="block" color="success" (click)="completeDelivery()">
+    Selesaikan Pengiriman
+  </ion-button>
+</ion-content>

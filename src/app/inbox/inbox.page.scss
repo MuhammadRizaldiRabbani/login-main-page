@@ -1,0 +1,35 @@
+ion-header {
+    --background: #32cd32; /* Warna hijau */
+    color: white;
+  }
+  
+  ion-toolbar ion-button {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .divider-icon {
+    font-size: 24px;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+  }
+  
+  .inbox-content {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .no-messages h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: black;
+  }
+  
+  .no-messages p {
+    font-size: 14px;
+    color: #777;
+  }
+  

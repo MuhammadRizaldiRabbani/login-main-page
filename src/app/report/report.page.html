@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/main"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-bold">Report</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+    placeholder="Search Nopol"
+    [(ngModel)]="searchText"
+    (ionInput)="filterReports()"
+    class="custom-search"
+  ></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let report of filteredReports">
+      <ion-label>
+        <h2>{{ report.nopol }}</h2>
+        <p>{{ report.namaMobil }}</p>
+      </ion-label>
+      <ion-button fill="clear" color="success" slot="end" size="small" disabled>
+        Selesai
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

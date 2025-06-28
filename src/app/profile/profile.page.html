@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/main"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding profile-page">
+  <div class="profile-icon">
+    <ion-icon name="person-circle-outline" size="large"></ion-icon>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Nama Lengkap</ion-label>
+      <ion-input value='{{ outputtext }}' readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input value="dzaki@gmail.com" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">No Telepon</ion-label>
+      <ion-input value="0813673686268" readonly></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-text class="change-password">
+    <a href="#">Ganti Kata Sandi</a>
+  </ion-text>
+
+  <ion-button expand="block" color="success">Simpan</ion-button>
+
+  <!-- Tombol Logout -->
+  <ion-button expand="block" color="danger" (click)="logout()">Logout</ion-button>
+</ion-content>

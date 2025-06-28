@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/main"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tambah Tracker</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!-- Menampilkan error message -->
+    <ion-item *ngIf="errorMessage" color="danger">
+      <ion-label>{{ errorMessage }}</ion-label>
+    </ion-item>
+
+    <!-- Dropdown Kendaraan -->
+    <ion-item>
+      <ion-label>Kendaraan</ion-label>
+      <ion-select formControlName="kendaraan">
+        <ion-select-option *ngFor="let item of kendaraan" [value]="item.id">
+          {{ item.jenis }} - {{ item.nomor_polisi }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Driver</ion-label>
+      <ion-select formControlName="driver">
+        <ion-select-option *ngFor="let item of drivers" [value]="item.id">
+          {{ item.name }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Rute</ion-label>
+      <ion-select formControlName="rute">
+        <ion-select-option *ngFor="let item of rutes" [value]="item.id">
+          {{ item.asal }} - {{ item.tujuan }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+
+    <!-- Input Status -->
+    <ion-item>
+      <ion-label>Status</ion-label>
+      <ion-input formControlName="status" type="text"></ion-input>
+    </ion-item>
+
+    <!-- Input Deskripsi Barang -->
+    <ion-item>
+      <ion-label>Deskripsi Barang</ion-label>
+      <ion-input formControlName="deskripsiBarang" type="text"></ion-input>
+    </ion-item>
+
+    <!-- Input Estimasi Kedatangan -->
+    <ion-item>
+      <ion-label>Estimasi Kedatangan</ion-label>
+      <ion-datetime formControlName="estimasiKedatangan" displayFormat="MM/DD/YYYY"></ion-datetime>
+    </ion-item>
+
+    <!-- Tombol Simpan dan Loading Spinner -->
+    <ion-button type="submit" [disabled]="form.invalid || loading">
+      <ion-spinner *ngIf="loading" name="dots"></ion-spinner>
+      Simpan
+    </ion-button>
+  </form>
+</ion-content>
